@@ -17,24 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(identifier: "ViewController") as! ViewController
-        let navigationController = UINavigationController(rootViewController: UIViewController)
+        let viewController = storyboard.instantiateViewController(identifier: "ViewController")
+        let navigationController = UINavigationController(rootViewController: viewController)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
         
- 
-        // Override point for customization after application launch.
         return true
     }
 
-    
-    
-    // This function should stay?
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
 
 
 }
