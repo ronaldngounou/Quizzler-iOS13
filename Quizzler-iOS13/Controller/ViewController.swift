@@ -26,7 +26,11 @@ class ViewController: UIViewController {
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
-        let userAnswer = sender.currentTitle!
+        guard let userAnswer = sender.currentTitle else {
+            questionLabel.text = "An unexpected error occured."
+            assertionFailure("Unexpected case happened.")
+            return
+        }
         
         let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
         
