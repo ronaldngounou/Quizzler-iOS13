@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52F58ED62BCDD99200372298 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F58ED52BCDD99200372298 /* SceneDelegate.swift */; };
 		AD4BDE4A22D878BA005BA4CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */; };
 		AD4BDE4E22D878BA005BA4CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BDE4D22D878BA005BA4CC /* ViewController.swift */; };
 		AD4BDE5122D878BA005BA4CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD4BDE4F22D878BA005BA4CC /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52F58ED52BCDD99200372298 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AD4BDE4622D878BA005BA4CC /* Quizzler-iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quizzler-iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD4BDE4D22D878BA005BA4CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */,
+				52F58ED52BCDD99200372298 /* SceneDelegate.swift */,
 				AD7631C222FC1F7500C6E71B /* Model */,
 				AD7631C322FC201E00C6E71B /* View */,
 				AD7631C422FC206D00C6E71B /* Controller */,
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F58ED62BCDD99200372298 /* SceneDelegate.swift in Sources */,
 				AD7631C622FC227F00C6E71B /* QuizBrain.swift in Sources */,
 				AD4BDE4E22D878BA005BA4CC /* ViewController.swift in Sources */,
 				AD7631C122FB176100C6E71B /* Question.swift in Sources */,

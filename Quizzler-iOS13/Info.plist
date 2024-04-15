@@ -22,6 +22,8 @@
 	<true/>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
+		<key>UIApplicationSupportsTabbedSceneCollection</key>
+		<false/>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 		<key>UISceneConfigurations</key>
@@ -29,6 +31,8 @@
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UILaunchStoryboardName</key>
 					<string>LaunchScreen</string>
 					<key>UISceneConfigurationName</key>
@@ -40,7 +44,7 @@
 		</dict>
 	</dict>
 	<key>UILaunchStoryboardName</key>
-	<string>Main.storyboard</string>
+	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
