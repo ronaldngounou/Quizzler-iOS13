@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct QuizBrain {
+final class QuizBrain {
     
     var questionNumber = 0
     var score = 0
@@ -36,11 +36,11 @@ struct QuizBrain {
         return Float(questionNumber) / Float(quiz.count)
     }
     
-    mutating func getScore() -> Int {
+    func getScore() -> Int {
         return score
     }
     
-     mutating func nextQuestion() {
+    func nextQuestion() {
         
         if questionNumber + 1 < quiz.count {
             questionNumber += 1
@@ -49,7 +49,7 @@ struct QuizBrain {
         }
     }
     
-    mutating func checkAnswer(userAnswer: String) -> Bool {
+    func checkAnswer(userAnswer: String) -> Bool {
         if userAnswer == quiz[questionNumber].answer {
             score += 1
             return true

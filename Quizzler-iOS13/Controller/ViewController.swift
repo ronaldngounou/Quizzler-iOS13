@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     var quizBrain = QuizBrain()
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         updateUI()
@@ -26,7 +26,11 @@ class ViewController: UIViewController {
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
-        let userAnswer = sender.currentTitle!
+        guard let userAnswer = sender.currentTitle else {
+            questionLabel?.text = "An unexpected error occured."
+            assertionFailure("Unexpected case happened.")
+            return
+        }
         
         let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
         
@@ -42,7 +46,9 @@ class ViewController: UIViewController {
     }
     
     @objc func updateUI() {
+        
         questionLabel.text = quizBrain.getQuestionText()
+        
         progressBar.progress = quizBrain.getProgress()
         scoreLabel.text = "Score: \(quizBrain.getScore())"
         
