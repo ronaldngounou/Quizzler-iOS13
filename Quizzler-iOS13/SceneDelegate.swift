@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         // 3. Create the view hierarchie programmatically
-        let viewController = ViewController()
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController")
         let navigationController = UINavigationController(rootViewController: viewController)
         
         // 4.Set the root view Controller of the window with my view controller

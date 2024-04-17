@@ -93,7 +93,7 @@
                     <connections>
                         <outlet property="falseButton" destination="tbn-vQ-GyC" id="9gU-zz-DMi"/>
                         <outlet property="progressBar" destination="TXm-qh-7Xg" id="ZJn-UV-PEJ"/>
-                        <outlet property="questionLabel" destination="rSI-li-mhO" id="TgS-is-0Hd"/>
+                        <outlet property="questionLabel" destination="rSI-li-mhO" id="X9d-MX-dNP"/>
                         <outlet property="scoreLabel" destination="LOv-gH-7fF" id="j7Q-ho-ikd"/>
                         <outlet property="trueButton" destination="oVw-Hl-IRe" id="zty-Zc-EDo"/>
                     </connections>

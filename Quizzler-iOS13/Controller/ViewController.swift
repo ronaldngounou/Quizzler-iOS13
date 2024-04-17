@@ -47,18 +47,7 @@ class ViewController: UIViewController {
     
     @objc func updateUI() {
         
-        /*guard let qLabel = quizBrain.getQuestionText() else {
-            questionLabel?.text = "An unexpected error occured."
-            assertionFailure("Unexpected case happened.")
-            return
-        }*/
         questionLabel.text = quizBrain.getQuestionText()
-        
-        /*guard let progressBar = quizBrain.getProgress() else {
-            progressBar?.progress = "An unexpected error occured."
-            assertionFailure("Unexpected case happened.")
-            return
-        }*/
         
         progressBar.progress = quizBrain.getProgress()
         scoreLabel.text = "Score: \(quizBrain.getScore())"
