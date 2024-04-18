@@ -105,7 +105,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="falseButton" destination="tbn-vQ-GyC" id="9gU-zz-DMi"/>
+                        <outlet property="falseButton" destination="tbn-vQ-GyC" id="OVg-cZ-PA6"/>
                         <outlet property="progressBar" destination="TXm-qh-7Xg" id="ZJn-UV-PEJ"/>
                         <outlet property="questionLabel" destination="rSI-li-mhO" id="X9d-MX-dNP"/>
                         <outlet property="scoreLabel" destination="LOv-gH-7fF" id="j7Q-ho-ikd"/>

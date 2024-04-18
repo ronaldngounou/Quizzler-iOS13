@@ -8,21 +8,37 @@
 
 import Foundation
 
-class QuizManager{
+final class QuizManager{
     
     var questions: [ChoicesQuestions] = []
     var questionNumber = 0
     var score = 0
     
     init() {
-        let question1 = ChoicesQuestions(questionText: "What is the capital of France?", choices: ["London", "Paris", "Berlin"], correctAnswerIndex: 1, explanation: "Paris is the capital of France.")
+        let question1 = ChoicesQuestions(
+            questionText: "What is the capital of France?",
+            choices: [
+                "London",
+                "Paris",
+                "Berlin"
+            ],
+            correctAnswerIndex: 1,
+            explanation: "Paris is the capital of France."
+        )
         
-        let question2 = ChoicesQuestions(questionText: "What is the capital of Belgium?", choices: ["London", "Paris", "Brussels"], correctAnswerIndex: 2, explanation: "Brussels is the capital of Belgium.")
+        let question2 = ChoicesQuestions(
+            questionText: "What is the capital of Belgium?",
+            choices: [
+                "London",
+                "Paris",
+                "Brussels"
+            ],
+            correctAnswerIndex: 2,
+            explanation: "Brussels is the capital of Belgium."
+        )
         
         
-        
-        questions.append(question1)
-        questions.append(question2)
+        questions.append(contentsOf: [question1, question2])
     }
     
     func getQuestionText() -> String {
@@ -31,15 +47,6 @@ class QuizManager{
     
     func getProgress() -> Float {
         return Float(questionNumber) / Float(questions.count)
-    }
-    
-    func nextQuestion() {
-        
-        if questionNumber + 1 < questions.count {
-            questionNumber += 1
-        } else {
-            questionNumber = 0
-        }
     }
     
     func getCurrentQuestion() -> ChoicesQuestions? {
