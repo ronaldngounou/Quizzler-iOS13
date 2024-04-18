@@ -61,11 +61,11 @@ final class QuizManager{
         return score
     }
     
-    func checkAnswer(_ selectedAnswerIndex: Int) -> Bool {
+    func checkAnswer(_ selectedChoice: String) -> Bool {
         guard let currentQuestion  = getCurrentQuestion() else {
             return false
         }
-        if selectedAnswerIndex == currentQuestion.correctAnswerIndex {
+        if selectedChoice == currentQuestion.choices[currentQuestion.correctAnswerIndex] {
             score += 1
             return true
         } else {

@@ -27,26 +27,28 @@ class ViewController: UIViewController {
         updateUI()
     }
 
-    /*@IBAction func answerButtonPressed(_ sender: UIButton) {
+    @IBAction func answerButtonPressed(_ sender: UIButton) {
+        //let selectedChoice: String? //As I cannot define the variable outside of the conditional
+        // statements, I will define the variable inside the function to handle force unwrapping.
         
-        guard let userAnswer = sender.else {
+        guard let selectedChoice = sender.currentTitle else {
             questionLabel?.text = "An unexpected error occured."
             assertionFailure("Unexpected case happened.")
             return
         }
         
-        let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
+        let userGotItRight = quizBrain.checkAnswer(selectedChoice)
         
-        if userGotItRight {
+        if userGotItRight{
             sender.backgroundColor = UIColor.green
         } else {
             sender.backgroundColor = UIColor.red
         }
         
         quizBrain.moveToNextQuestion()
-        
+    
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
-    }*/
+    }
     
     @objc func updateUI() {
         
@@ -65,7 +67,6 @@ class ViewController: UIViewController {
         choice1.backgroundColor = UIColor.clear
         choice2.backgroundColor = UIColor.clear
         choice3.backgroundColor = UIColor.clear
-        
 
     }
 
