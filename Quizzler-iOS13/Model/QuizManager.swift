@@ -57,6 +57,10 @@ final class QuizManager{
         return questions[questionNumber]
     }
     
+    func getExplanation() -> String {
+        return questions[questionNumber].explanation
+    }
+    
     func getScore() -> Int {
         return score
     }

@@ -28,8 +28,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        //let selectedChoice: String? //As I cannot define the variable outside of the conditional
-        // statements, I will define the variable inside the function to handle force unwrapping.
         
         guard let selectedChoice = sender.currentTitle else {
             questionLabel?.text = "An unexpected error occured."
@@ -41,8 +39,10 @@ class ViewController: UIViewController {
         
         if userGotItRight{
             sender.backgroundColor = UIColor.green
+            view.backgroundColor = .green
         } else {
             sender.backgroundColor = UIColor.red
+            showAlert(message: quizBrain.getExplanation())
         }
         
         quizBrain.moveToNextQuestion()
@@ -67,8 +67,15 @@ class ViewController: UIViewController {
         choice1.backgroundColor = UIColor.clear
         choice2.backgroundColor = UIColor.clear
         choice3.backgroundColor = UIColor.clear
-
+        
+        
     }
+    
+    func showAlert(message: String) {
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
 
 }
 
