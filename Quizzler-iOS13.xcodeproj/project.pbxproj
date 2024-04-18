@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52EE212A2BD16C5800B34D8A /* ChoicesQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE21292BD16C5800B34D8A /* ChoicesQuestions.swift */; };
+		52EE212C2BD16D1900B34D8A /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE212B2BD16D1900B34D8A /* QuizManager.swift */; };
 		52F58ED62BCDD99200372298 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F58ED52BCDD99200372298 /* SceneDelegate.swift */; };
 		AD4BDE4A22D878BA005BA4CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */; };
 		AD4BDE4E22D878BA005BA4CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BDE4D22D878BA005BA4CC /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52EE21292BD16C5800B34D8A /* ChoicesQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesQuestions.swift; sourceTree = "<group>"; };
+		52EE212B2BD16D1900B34D8A /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 		52F58ED52BCDD99200372298 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AD4BDE4622D878BA005BA4CC /* Quizzler-iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quizzler-iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 			children = (
 				AD7631C022FB176100C6E71B /* Question.swift */,
 				AD7631C522FC227F00C6E71B /* QuizBrain.swift */,
+				52EE21292BD16C5800B34D8A /* ChoicesQuestions.swift */,
+				52EE212B2BD16D1900B34D8A /* QuizManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,7 +181,9 @@
 				52F58ED62BCDD99200372298 /* SceneDelegate.swift in Sources */,
 				AD7631C622FC227F00C6E71B /* QuizBrain.swift in Sources */,
 				AD4BDE4E22D878BA005BA4CC /* ViewController.swift in Sources */,
+				52EE212C2BD16D1900B34D8A /* QuizManager.swift in Sources */,
 				AD7631C122FB176100C6E71B /* Question.swift in Sources */,
+				52EE212A2BD16C5800B34D8A /* ChoicesQuestions.swift in Sources */,
 				AD4BDE4A22D878BA005BA4CC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
