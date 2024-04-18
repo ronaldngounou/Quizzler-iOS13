@@ -16,8 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var choice1: UIButton!
     @IBOutlet weak var choice2: UIButton!
     @IBOutlet weak var choice3: UIButton!
-    
-    
+    //@IBOutlet var choiceButtons: [UIButton]! //could have been better with a list
+
     var quizBrain = QuizManager()
     
     
@@ -27,9 +27,9 @@ class ViewController: UIViewController {
         updateUI()
     }
 
-    @IBAction func answerButtonPressed(_ sender: UIButton) {
+    /*@IBAction func answerButtonPressed(_ sender: UIButton) {
         
-        guard let userAnswer = sender.currentTitle else {
+        guard let userAnswer = sender.else {
             questionLabel?.text = "An unexpected error occured."
             assertionFailure("Unexpected case happened.")
             return
@@ -46,17 +46,27 @@ class ViewController: UIViewController {
         quizBrain.moveToNextQuestion()
         
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
-    }
+    }*/
     
     @objc func updateUI() {
         
         questionLabel.text = quizBrain.getQuestionText()
         
+        let currentQuestion = quizBrain.getCurrentQuestion()
+        
+        choice1.setTitle(currentQuestion?.choices[0], for: .normal)
+        choice2.setTitle(currentQuestion?.choices[1], for: .normal)
+        choice3.setTitle(currentQuestion?.choices[2], for: .normal)
+        
+        
         progressBar.progress = quizBrain.getProgress()
         scoreLabel.text = "Score: \(quizBrain.getScore())"
         
-        trueButton.backgroundColor = UIColor.clear
-        falseButton.backgroundColor = UIColor.clear
+        choice1.backgroundColor = UIColor.clear
+        choice2.backgroundColor = UIColor.clear
+        choice3.backgroundColor = UIColor.clear
+        
+
     }
 
 }

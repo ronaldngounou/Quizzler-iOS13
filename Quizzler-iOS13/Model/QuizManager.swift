@@ -76,7 +76,7 @@ final class QuizManager{
     func moveToNextQuestion() {
         let nextQuestionNumber = questionNumber + 1
         if nextQuestionNumber < questions.count {
-            questionNumber = nextQuestionNumber 
+            questionNumber = nextQuestionNumber
         } else {
             questionNumber = 0
         }
