@@ -10,11 +10,11 @@ import UIKit
 
 class QuizViewController : UIViewController{
     
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var progressBar: UIProgressView!
-    @IBOutlet weak var trueButton: UIButton!
-    @IBOutlet weak var falseButton: UIButton!
-    @IBOutlet weak var scoreLabel: UILabel!
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        
+       // updateUI()
+    }
     
     
     
