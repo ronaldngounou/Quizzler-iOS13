@@ -12,11 +12,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
-    @IBOutlet weak var trueButton: UIButton!
-    @IBOutlet weak var falseButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var choice1: UIButton!
+    @IBOutlet weak var choice2: UIButton!
+    @IBOutlet weak var choice3: UIButton!
     
-    var quizBrain = QuizBrain()
+    
+    var quizBrain = QuizManager()
+    
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +43,7 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.red
         }
         
-        quizBrain.nextQuestion()
+        quizBrain.moveToNextQuestion()
         
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }

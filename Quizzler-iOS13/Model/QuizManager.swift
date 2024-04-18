@@ -57,6 +57,10 @@ final class QuizManager{
         return questions[questionNumber]
     }
     
+    func getScore() -> Int {
+        return score
+    }
+    
     func checkAnswer(_ selectedAnswerIndex: Int) -> Bool {
         guard let currentQuestion  = getCurrentQuestion() else {
             return false
@@ -70,8 +74,9 @@ final class QuizManager{
     }
     
     func moveToNextQuestion() {
-        if questionNumber + 1 < questions.count {
-            questionNumber += 1
+        let nextQuestionNumber = questionNumber + 1
+        if nextQuestionNumber < questions.count {
+            questionNumber = nextQuestionNumber 
         } else {
             questionNumber = 0
         }

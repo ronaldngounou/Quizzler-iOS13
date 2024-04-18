@@ -15,7 +15,12 @@ struct ChoicesQuestions{
     let explanation: String
     
     
-    init(questionText: String, choices: [String], correctAnswerIndex: Int, explanation: String){
+    init(
+        questionText: String,
+        choices: [String],
+        correctAnswerIndex: Int,
+        explanation: String
+    ){
         self.questionText = questionText
         self.choices = choices
         self.correctAnswerIndex = correctAnswerIndex
