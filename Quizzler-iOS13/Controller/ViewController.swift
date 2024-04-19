@@ -39,14 +39,13 @@ class ViewController: UIViewController {
         
         if userGotItRight{
             sender.backgroundColor = UIColor.green
-            view.backgroundColor = .green
         } else {
             sender.backgroundColor = UIColor.red
             showAlert(message: quizBrain.getExplanation())
         }
         
         quizBrain.moveToNextQuestion()
-    
+     
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     
